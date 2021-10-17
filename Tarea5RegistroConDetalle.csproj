@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UI\Registros\bus.jpg" />
+    <None Remove="UI\Registros\eli.jpg" />
+    <None Remove="UI\Registros\guar.jpg" />
+    <None Remove="UI\Registros\nue.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DATA\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Registros\bus.jpg" />
+    <Resource Include="UI\Registros\eli.jpg" />
+    <Resource Include="UI\Registros\guar.jpg" />
+    <Resource Include="UI\Registros\nue.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DATA\rolescontrol.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
